@@ -190,10 +190,12 @@ KeepMakeTxCond = And(FileExists(r"^.*OpenColorIO.*\.(so|dll|dylib).*$", FileExis
 
 MtoA = {"bin": [(re.compile(r"^kick(\.exe)?$"), Delete()),
                 (re.compile(r"^osl(c|info)(\.exe)?$"), Delete()),
+                (re.compile(r"^noice(\.exe)?$"), Delete()),
                 (re.compile(r"^maketx(\.exe)?$"), Delete(condition=KeepMakeTxCond, invertCondition=True)),
                 (re.compile(r"^(lib)?ai\.(dll|so|dylib)$"), Delete()),
                 (re.compile(r"^(lib)?AdClmHub\.(dll|so|dylib)$"), Delete()),
                 (re.compile(r"^(lib)?adlmint\.(dll|so|dylib)$"), Delete()),
+                (re.compile(r"^(lib)?optix\.(dll|so|dylib)$"), Delete()),
                 ("ProductInformation.pit", Delete())],
         "scripts": [("arnold", Delete()),
                     ("pykick", Delete())],
