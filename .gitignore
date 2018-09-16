@@ -32,6 +32,8 @@ eco.out
 /renderer/arnold/
 /gaffer/gaffer/
 /downloads
+/python/Qute*
+/python/das*
 /*.env
 .DS_Store
 
